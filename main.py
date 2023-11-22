@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.cluster import KMeans
 import numpy as np
+from flask import Flask,request,jsonify
 
 app = Flask(__name__)
 
@@ -21,7 +22,7 @@ def perform_clustering():
 
     # Determine the optimal number of clusters using the elbow method
     inertia = []
-    k_values = range(2, 11)
+    k_values = range(2, len(latitudes) + 1)
 
     for k in k_values:
         kmeans = KMeans(n_clusters=k, init="random", n_init=10, max_iter=300, random_state=42)

@@ -2,7 +2,7 @@ import requests
 import json
 
 # URL of your Flask app (change if deployed)
-url = 'http://127.0.0.1:8081/analyze'
+url = 'http://127.0.0.1:8081/cluster'
 
 # Sample data for latitudes and longitudes
 sample_latitudes = [37.7749, 34.0522, 40.7128, 41.8781]
